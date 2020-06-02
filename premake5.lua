@@ -1,6 +1,7 @@
 project "ImGui"
 	kind "StaticLib"
 	language "C++"
+	staticruntime "on"
 
   targetdir("bin/%{prj.name}/" .. outputdir )
   objdir("bin-int/%{prj.name}/" .. outputdir )
@@ -22,6 +23,10 @@ project "ImGui"
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
+
+	filter "configurations:Development"
+		runtime "Release"
+		optimize "on"
 
 	filter "configurations:Release"
 		runtime "Release"
