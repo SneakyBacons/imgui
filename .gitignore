@@ -53,3 +53,5 @@ bin/
 bin-int/
 
 ImGui.vcxproj
+
+ImGui.vcxproj.filters
